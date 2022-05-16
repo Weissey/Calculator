@@ -20,6 +20,9 @@ body {
     flex-direction: column;
     background-color: var(--main-background-color);
     width: 30rem;
+    box-shadow: 0 2px 8px rgb(0, 0, 0);
+    border-radius: 0.6rem;
+    border: 2px solid rgb(0, 0, 0);
 }
 
 #display {
@@ -27,11 +30,15 @@ body {
     justify-content: center;
     align-items: center;
     align-self: center;
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     width: 26rem;
-    height: 16rem;
+    height: 14rem;
     margin-top: 2rem;
     border-radius: 0.4rem;
+    padding: 0.4rem;
+    word-break: break-all;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
     background-color: var(--display-color);
 }
 
@@ -42,12 +49,14 @@ body {
     background-color: var(--button-color);
     border-radius: 0.4rem;
     font-size: 1.6rem;
+    box-shadow: 0 2px 2px rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
 }
 
 #delClearRow {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 1rem;
     margin-top: 1.8rem;
 }
 
