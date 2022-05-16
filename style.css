@@ -1,0 +1,92 @@
+:root {
+    --button-color: #9E9E9E;
+    --main-background-color: #A5CFA0;
+    --display-color: #C0AE98;
+    --page-color: #C8B9F1;
+}
+
+body {
+    background-color: var(--page-color);
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-background-color);
+    width: 28rem;
+    height: 40rem;
+}
+
+#display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 26rem;
+    height: 12rem;
+    margin-top: 1.2rem;
+    background-color: var(--display-color);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-color);
+}
+
+#delClearRow {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 1.2rem;
+}
+
+#clearBtn, #delBtn {
+    width: 12rem;
+    height: 3rem;
+}
+
+#buttonPad {
+    display: flex;
+    flex: 1 1 auto;
+    align-self: center;
+    margin-top: 1.2rem;
+}
+
+#leftPad {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    flex: 1 1 auto;
+    margin-right: 1.2rem;
+}
+
+.leftPadBtn {
+    width: 6rem;
+    height: 4rem;
+}
+
+#rightPad {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    flex: 1 1 auto;
+}
+
+.rightPadBtn {
+    width: 4rem;
+    height: 4rem;
+}
+
+#padFirstRow,
+#padSecondRow,
+#padThirdRow,
+#padFourthRow {
+    display: flex;
+}
