@@ -1,8 +1,8 @@
 :root {
-    --button-color: #9E9E9E;
-    --main-background-color: #A5CFA0;
+    --button-color: #A8A8A8;
+    --calculator-background-color: #97C27C;
     --display-color: #C0AE98;
-    --page-color: #C8B9F1;
+    --page-color: #9B84A3;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 #calculator {
     display: flex;
     flex-direction: column;
-    background-color: var(--main-background-color);
+    background-color: var(--calculator-background-color);
     width: 30rem;
     box-shadow: 0 2px 8px rgb(0, 0, 0);
     border-radius: 0.6rem;
@@ -51,6 +51,19 @@ body {
     font-size: 1.6rem;
     box-shadow: 0 2px 2px rgb(0, 0, 0);
     border: 2px solid rgb(0, 0, 0);
+    transition: all 0.12s ease;
+    cursor: cell;
+    user-select: none;
+}
+
+.button:hover {
+    box-shadow: inset 0 0 0 1px rgb(0, 0, 0);
+    box-shadow: 0 4px 2px rgb(0, 0, 0);
+    transform: scale(1.02);
+}
+
+.button:active {
+    transform: scale(0.95);
 }
 
 #delClearRow {
