@@ -7,6 +7,7 @@
 
 body {
     background-color: var(--page-color);
+    font-family: "Nova Flat";
 }
 
 #container {
@@ -18,8 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--main-background-color);
-    width: 28rem;
-    height: 40rem;
+    width: 30rem;
 }
 
 #display {
@@ -27,9 +27,11 @@ body {
     justify-content: center;
     align-items: center;
     align-self: center;
+    flex: 1 0 auto;
     width: 26rem;
-    height: 12rem;
-    margin-top: 1.2rem;
+    height: 16rem;
+    margin-top: 2rem;
+    border-radius: 0.4rem;
     background-color: var(--display-color);
 }
 
@@ -38,25 +40,27 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--button-color);
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
 }
 
 #delClearRow {
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-top: 1.2rem;
+    margin-top: 1.8rem;
 }
 
 #clearBtn, #delBtn {
     width: 12rem;
-    height: 3rem;
+    height: 4rem;
 }
 
 #buttonPad {
     display: flex;
-    flex: 1 1 auto;
     align-self: center;
-    margin-top: 1.2rem;
+    margin-top: 1.8rem;
+    margin-bottom: 2rem;
 }
 
 #leftPad {
@@ -64,7 +68,12 @@ body {
     flex-direction: column;
     align-self: center;
     flex: 1 1 auto;
-    margin-right: 1.2rem;
+    margin-right: 1.6rem;
+    row-gap: 1rem;
+}
+
+.leftPadRow {
+    column-gap: 8px;
 }
 
 .leftPadBtn {
@@ -77,6 +86,7 @@ body {
     flex-direction: column;
     align-self: center;
     flex: 1 1 auto;
+    row-gap: 1rem;
 }
 
 .rightPadBtn {
