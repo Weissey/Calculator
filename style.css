@@ -27,8 +27,8 @@ body {
 
 #display {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
     align-self: center;
     flex: 1 1 auto;
     width: 26rem;
@@ -39,6 +39,8 @@ body {
     word-break: break-all;
     box-shadow: 0 2px 4px rgb(0, 0, 0);
     border: 2px solid rgb(0, 0, 0);
+    font-size: 4rem;
+    text-overflow: scroll;
     background-color: var(--display-color);
 }
 
@@ -47,12 +49,13 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--button-color);
-    border-radius: 0.4rem;
+    border-radius: 0.8rem;
     font-size: 1.6rem;
     box-shadow: 0 2px 2px rgb(0, 0, 0);
     border: 2px solid rgb(0, 0, 0);
     transition: all 0.12s ease;
     cursor: cell;
+    font-family: "Nova Flat";
     user-select: none;
 }
 
@@ -99,7 +102,7 @@ body {
 }
 
 .leftPadBtn {
-    width: 6rem;
+    width: 6.4rem;
     height: 4rem;
 }
 
@@ -121,4 +124,8 @@ body {
 #padThirdRow,
 #padFourthRow {
     display: flex;
+}
+
+.activatedBtn {
+    background-color: #7E7E7E;
 }

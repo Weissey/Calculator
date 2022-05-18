@@ -11,39 +11,39 @@
     <body>
         <div id = "container">
             <div id = "calculator">
-                <div id = "display"> 12378497213895719834750981347598173095981375981739805 </div>
+                <div id = "display"></div>
                 <div id = "delClearRow">
-                    <div id = "delBtn" class = "button"> DEL </div>
-                    <div id = "clearBtn" class = "button"> C </div>
+                    <button id = "delBtn" class = "button" data-operator="">DEL</button>
+                    <button id = "clearBtn" class = "button" data-operator="">C</button>
                 </div>
                 <div id = "buttonPad">
                     <div id = "leftPad">
                         <div id = "padFirstRow" class = "leftPadRow">
-                            <div id = "numOne" class = "button leftPadBtn"> 1 </div>
-                            <div id = "numTwo" class = "button leftPadBtn"> 2 </div>
-                            <div id = "numThree" class = "button leftPadBtn"> 3 </div>
+                            <button id = "numOne" class = "button leftPadBtn" data-number>1</button>
+                            <button id = "numTwo" class = "button leftPadBtn" data-number>2</button>
+                            <button id = "numThree" class = "button leftPadBtn" data-number>3</button>
                         </div>
                         <div id = "padSecondRow" class = "leftPadRow">
-                            <div id = "numFour" class = "button leftPadBtn"> 4 </div>
-                            <div id = "numFive" class = "button leftPadBtn"> 5 </div>
-                            <div id = "numSix" class = "button leftPadBtn"> 6 </div>
+                            <button id = "numFour" class = "button leftPadBtn" data-number>4</button>
+                            <button id = "numFive" class = "button leftPadBtn" data-number>5</button>
+                            <button id = "numSix" class = "button leftPadBtn" data-number>6</button>
                         </div>
                         <div id="padThirdRow" class = "leftPadRow">
-                            <div id = "numSeven" class = "button leftPadBtn"> 7 </div>
-                            <div id = "numEight" class = "button leftPadBtn"> 8 </div>
-                            <div id = "numNine" class = "button leftPadBtn"> 9 </div>
+                            <button id = "numSeven" class = "button leftPadBtn" data-number>7</button>
+                            <button id = "numEight" class = "button leftPadBtn" data-number>8</button>
+                            <button id = "numNine" class = "button leftPadBtn" data-number>9</button>
                         </div>
                         <div id = "padFourthRow" class = "leftPadRow">
-                            <div id = "periodBtn" class = "button leftPadBtn"> . </div>
-                            <div id = "numZero" class = "button leftPadBtn"> 0 </div>
-                            <div id = "equalBtn" class = "button leftPadBtn"> = </div>
+                            <button id = "periodBtn" class = "button leftPadBtn" data-operator>.</button>
+                            <button id = "numZero" class = "button leftPadBtn" data-number>0</button>
+                            <button id = "equalBtn" class = "button leftPadBtn" data-operator>=</button>
                         </div>
                     </div>
                     <div id = "rightPad">
-                        <div id = "addBtn" class = "button rightPadBtn"> + </div>
-                        <div id = "minusBtn" class = "button rightPadBtn"> - </div>
-                        <div id = "multiplyBtn" class = "button rightPadBtn"> * </div>
-                        <div id = "divideBtn" class = "button rightPadBtn"> / </div>
+                        <button id = "addBtn" class = "button rightPadBtn" data-operator>+</button>
+                        <button id = "minusBtn" class = "button rightPadBtn" data-operator>-</button>
+                        <button id = "multiplyBtn" class = "button rightPadBtn" data-operator>*</button>
+                        <button id = "divideBtn" class = "button rightPadBtn" data-operator>/</button>
                     </div>
                 </div>
             </div>
