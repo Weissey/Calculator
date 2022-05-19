@@ -53,7 +53,7 @@ function setOperation(operator) {
         deleteNum();
         return;
     } else if (operator === "C") {
-        clearBothDisplay();
+        clearBOTHDisplay();
         return;
     }
     lastValue = currentValue;
@@ -78,7 +78,7 @@ function setOperation(operator) {
     // }
 }
 
-function clearBothDisplay() {
+function clearBOTHDisplay() {
     topDisplay.textContent = "";
     botDisplay.textContent = "0";
     deactivateBtns();
@@ -101,26 +101,38 @@ function deleteNum() {
 }
 
 function addNum(a, b) {
-    clearBothDisplay();
-    return botDisplay.textContent = a + b;
+    clearBOTHDisplay();
+    return botDisplay.textContent = +a + +b;
 }
 
-function minusNum() {
-
+function minusNum(a, b) {
+    clearBOTHDisplay();
+    return botDisplay.textContent = +a - +b;
 }
 
-function multiplyNum() {
-    
+function multiplyNum(a, b) {
+    clearBOTHDisplay();
+    return botDisplay.textContent = +a * +b;
 }
 
-function divideNum() {
-
+function divideNum(a, b) {
+    clearBOTHDisplay();
+    return botDisplay.textContent = +a / +b;
 }
 
 function evaluate() {
     console.log(currentOperator.id)
     if (currentOperator.id === "addBtn") {
         addNum(lastValue, currentValue);
+    }
+    if (currentOperator.id === "minusBtn") {
+        minusNum(lastValue, currentValue);
+    }
+    if (currentOperator.id === "multiplyBtn") {
+        multiplyNum(lastValue, currentValue);
+    }
+    if (currentOperator.id === "divideBtn") {
+        divideNum(lastValue, currentValue);
     }
 }
 
