@@ -27,20 +27,41 @@ body {
 
 #display {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    flex-direction: column;
+}
+
+#topDisplay {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     align-self: center;
     flex: 1 1 auto;
     width: 26rem;
-    height: 14rem;
+    height: 4rem;
     margin-top: 2rem;
     border-radius: 0.4rem;
     padding: 0.4rem;
     word-break: break-all;
     box-shadow: 0 2px 4px rgb(0, 0, 0);
     border: 2px solid rgb(0, 0, 0);
-    font-size: 4rem;
-    text-overflow: scroll;
+    font-size: 2rem;
+    background-color: var(--display-color);
+}
+
+#botDisplay {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-self: center;
+    flex: 1 1 auto;
+    width: 26rem;
+    height: 10rem;
+    border-radius: 0.4rem;
+    padding: 0.4rem;
+    word-break: break-all;
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 4.6rem;
     background-color: var(--display-color);
 }
 
