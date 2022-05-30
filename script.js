@@ -7,6 +7,7 @@ const addBtn = document.getElementById("addBtn");
 const minusBtn = document.getElementById("minusBtn");
 const multiplyBtn = document.getElementById("multiplyBtn");
 const divideBtn = document.getElementById("divideBtn");
+const periodBtn = document.getElementById("periodBtn");
 
 const numberBtns = document.querySelectorAll("[data-number]");
 const operatorBtns = document.querySelectorAll("[data-operator]")
@@ -15,6 +16,7 @@ const DEFAULT_DISPLAY_VALUE = "0";
 
 let currentValue = DEFAULT_DISPLAY_VALUE;
 let lastValue = DEFAULT_DISPLAY_VALUE;
+let storedValue = DEFAULT_DISPLAY_VALUE;
 let currentOperator;
 
 console.log(operatorBtns);
@@ -55,27 +57,15 @@ function setOperation(operator) {
     } else if (operator === "C") {
         clearBOTHDisplay();
         return;
+    } else if (operator === ".") {
+        appendDecimal();
+        return;
     }
+    
     lastValue = currentValue;
+    if (storedValue === DEFAULT_DISPLAY_VALUE) lastValue = botDisplay.textContent;
     appendTopNumber(lastValue);
     clearBotDisplay();
-    // switch (operator)
-    // {
-    //     case "+":
-    //         addNum(lastValue, currentValue);
-    //         break;
-
-    //     case "-":
-    //         minusNum();
-    //         break;
-
-    //     case "*":
-    //         multiplyNum();
-    //         break;
-
-    //     case "/":
-    //         divideNum();
-    // }
 }
 
 function clearBOTHDisplay() {
@@ -94,7 +84,7 @@ function clearBotDisplay() {
 
 function deleteNum() {
     if (botDisplay.textContent === "0") return;
-    botDisplay.textContent = botDisplay.textContent
+    currentValue = botDisplay.textContent = botDisplay.textContent
         .toString()
         .slice(0, -1);
     if (botDisplay.textContent === "") return botDisplay.textContent = "0";
@@ -102,22 +92,26 @@ function deleteNum() {
 
 function addNum(a, b) {
     clearBOTHDisplay();
-    return botDisplay.textContent = +a + +b;
+    return storedValue = botDisplay.textContent = +a + +b;
 }
 
 function minusNum(a, b) {
     clearBOTHDisplay();
-    return botDisplay.textContent = +a - +b;
+    return storedValue = botDisplay.textContent = +a - +b;
 }
 
 function multiplyNum(a, b) {
     clearBOTHDisplay();
-    return botDisplay.textContent = +a * +b;
+    return storedValue = botDisplay.textContent = +a * +b;
 }
 
 function divideNum(a, b) {
     clearBOTHDisplay();
-    return botDisplay.textContent = +a / +b;
+    return storedValue = botDisplay.textContent = +a / +b;
+}
+
+function appendDecimal() {
+    return botDisplay.textContent += ".";
 }
 
 function evaluate() {
@@ -134,10 +128,11 @@ function evaluate() {
     if (currentOperator.id === "divideBtn") {
         divideNum(lastValue, currentValue);
     }
+    currentValue = botDisplay.textContent;
 }
 
 function activateButton() {
-    if (this === delBtn || this === clearBtn || this === equalBtn) return;
+    if (this === delBtn || this === clearBtn || this === equalBtn || this === periodBtn) return;
 
     currentOperator = this;
     this.classList.add("activatedBtn")
