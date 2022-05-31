@@ -33,10 +33,6 @@ operatorBtns.forEach((button) => {
     button.addEventListener(("click"), activateButton);
 })
 
-operatorBtns.forEach((button) => {
-    button.addEventListener(("click"), checkAnyActive);
-})
-
 function appendBotNumber(number) {
     if (botDisplay.textContent === "0") {
         botDisplay.textContent = "";
@@ -69,7 +65,6 @@ function setOperation(operator) {
     lastValue = currentValue;
     if (storedValue === DEFAULT_DISPLAY_VALUE) lastValue = botDisplay.textContent;
     appendTopNumber(lastValue);
-    clearBotDisplay();
 }
 
 function clearBOTHDisplay() {
@@ -145,12 +140,13 @@ function roundResult(number) {
     return botDisplay.textContent = Math.round(number * 100) / 100;
 }
 
-function checkAnyActive() {
-    //SJFLKADSJFKLASJDFLKJASDLF
-}
-
 function activateButton() {
     if (this === delBtn || this === clearBtn || this === equalBtn || this === periodBtn) return;
+
+    if (this.classList.contains("activatedBtn")) {
+        console.log("YES IT CONTAINS");
+        return evaluate();
+    }
 
     currentOperator = this;
     this.classList.add("activatedBtn")
@@ -174,6 +170,7 @@ function activateButton() {
         minusBtn.classList.remove("activatedBtn");
         multiplyBtn.classList.remove("activatedBtn");
     }
+    clearBotDisplay()
 }
 
 function deactivateBtns() {
