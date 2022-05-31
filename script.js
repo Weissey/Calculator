@@ -33,6 +33,10 @@ operatorBtns.forEach((button) => {
     button.addEventListener(("click"), activateButton);
 })
 
+operatorBtns.forEach((button) => {
+    button.addEventListener(("click"), checkAnyActive);
+})
+
 function appendBotNumber(number) {
     if (botDisplay.textContent === "0") {
         botDisplay.textContent = "";
@@ -92,22 +96,28 @@ function deleteNum() {
 
 function addNum(a, b) {
     clearBOTHDisplay();
-    return storedValue = botDisplay.textContent = +a + +b;
+    storedValue = +a + +b;
+    return roundResult(storedValue);
 }
 
 function minusNum(a, b) {
     clearBOTHDisplay();
-    return storedValue = botDisplay.textContent = +a - +b;
+    storedValue = +a - +b;
+    return roundResult(storedValue);
+
 }
 
 function multiplyNum(a, b) {
     clearBOTHDisplay();
-    return storedValue = botDisplay.textContent = +a * +b;
+    storedValue = +a * +b
+    return roundResult(storedValue);
 }
 
 function divideNum(a, b) {
     clearBOTHDisplay();
-    return storedValue = botDisplay.textContent = +a / +b;
+    if(b === "0") return botDisplay.textContent = "ERROR";
+    storedValue = +a / +b;
+    return roundResult(storedValue);
 }
 
 function appendDecimal() {
@@ -129,6 +139,14 @@ function evaluate() {
         divideNum(lastValue, currentValue);
     }
     currentValue = botDisplay.textContent;
+}
+
+function roundResult(number) {
+    return botDisplay.textContent = Math.round(number * 100) / 100;
+}
+
+function checkAnyActive() {
+    //SJFLKADSJFKLASJDFLKJASDLF
 }
 
 function activateButton() {
