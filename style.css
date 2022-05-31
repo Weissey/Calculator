@@ -37,7 +37,8 @@ body {
     align-self: center;
     flex: 1 1 auto;
     width: 26rem;
-    height: 4rem;
+    height: auto;
+    min-height: 4rem;
     margin-top: 2rem;
     border-radius: 0.4rem;
     padding: 0.4rem;
@@ -55,7 +56,8 @@ body {
     align-self: center;
     flex: 1 1 auto;
     width: 26rem;
-    height: 10rem;
+    height: auto;
+    min-height: 10rem;
     border-radius: 0.4rem;
     padding: 0.4rem;
     word-break: break-all;
@@ -63,6 +65,7 @@ body {
     border: 2px solid rgb(0, 0, 0);
     font-size: 4.6rem;
     background-color: var(--display-color);
+    overflow: auto;
 }
 
 .button {
