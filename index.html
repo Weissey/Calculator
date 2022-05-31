@@ -4,12 +4,19 @@
     <head>
         <title>Calculator</title>
         <meta charset = "UTF-8">
+        <script src="https://kit.fontawesome.com/d044f8f5da.js" crossorigin="anonymous"></script>
         <script src = "script.js" defer></script>
         <link rel = "stylesheet" href = "style.css">
         <link href = 'https://fonts.googleapis.com/css?family=Nova Flat' rel = 'stylesheet'>
     </head>
     <body>
         <div id = "container">
+            <div id = "textContainer">
+                <div id = "title">CALCULATOR</div>
+                <div id = "info">Dividing by zero is not possible.<br>
+                Use the equal operator after each calculation.
+                </div>
+            </div>
             <div id = "calculator">
                 <div id = "display">
                     <div id = "topDisplay"></div>
@@ -50,6 +57,17 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div id = "footer">
+            <span>
+                Built by Weissey
+            </span>
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+            <a href="https://github.com/Weissey" target = "_blank" id = "gitIcon">
+                <i class="fa-brands fa-github-square"></i>
+            </a>
         </div>
     </body>
 </html>
