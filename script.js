@@ -143,10 +143,12 @@ function roundResult(number) {
 function activateButton() {
     if (this === delBtn || this === clearBtn || this === equalBtn || this === periodBtn) return;
 
-    if (this.classList.contains("activatedBtn")) {
-        console.log("YES IT CONTAINS");
-        return evaluate();
-    }
+    // if (this.classList.contains("activatedBtn")) {
+    //     console.log("YES IT CONTAINS");
+    //     return evaluate();
+    // }
+
+    if (this.classList.contains("activatedBtn")) return;
 
     currentOperator = this;
     this.classList.add("activatedBtn")
