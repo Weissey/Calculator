@@ -13,8 +13,9 @@ body {
 }
 
 #container {
+    margin-top: 26px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 #textContainer {
