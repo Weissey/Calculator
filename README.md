@@ -1,4 +1,4 @@
-👉 [Live Preview](https://weissey.github.io/Calculator/)
+👉 [Live preview](https://weissey.github.io/Calculator/)
 
 Starting this project, I wasn't very confident I could make the calculator functional at all. The end product is definitely better than what I expected, but this all wasn't without setbacks. To begin, I need more practice with callback functions as it could greatly increase the efficiency of my code, especially within this project.
 
